@@ -5,7 +5,8 @@ const path = require('path')
 const bundler = browserify('project/index.js')
 
 bundler.require(path.resolve('./project/node_modules/another_module'), {
-  expose: 'another_module'
+  expose: 'another_module',
+  id: Math.random() + ''
 })
 
 bundler
